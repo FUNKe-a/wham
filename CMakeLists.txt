@@ -6,4 +6,4 @@ project(wham
 )
 
 include(cmake/options.cmake)
-include(cmake/flex.cmake)
+include(cmake/grammar.cmake)
