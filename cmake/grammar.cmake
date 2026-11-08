@@ -2,14 +2,14 @@ find_package(BISON REQUIRED)
 find_package(FLEX REQUIRED)
 
 bison_target(parser
-	grammar/parser.y
-	${bin_dir}/parser.cpp
+	grammar/wham_parse.y
+	${bin_dir}/wham_parse.cpp
 	DEFINES_FILE
-		${bin_dir}/parser.tab.hpp
+		${bin_dir}/wham_parse.tab.hpp
 )
 flex_target(scanner 
-	grammar/scanner.l
-	${bin_dir}/scanner.cpp
+	grammar/wham_scan.l
+	${bin_dir}/wham_scan.cpp
 )
 add_flex_bison_dependency(scanner parser)
 
